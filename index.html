@@ -327,7 +327,7 @@
   <section id="experiments">
     <div class="section-head">
       <h2 class="sec display">Enhancements we tried — and mostly rejected</h2>
-      <p class="sec-sub">Every popular "improvement," swept across the entire grid. Most didn't survive out-of-sample. The exact winning settings are withheld; the direction of each finding isn't.</p>
+      <p class="sec-sub">Every popular "improvement" — plus a couple we explored ourselves — tested across the grid. Most didn't survive out-of-sample. Exact winning settings are withheld; the direction of each finding isn't.</p>
     </div>
     <div class="tested">
       <div class="tcard"><div class="th"><span>Profit targets</span><span class="vd no">Mostly no</span></div>
@@ -338,6 +338,10 @@
         <p>Filtering by the prior-day close <b>hurt on average</b> and didn't improve the best setups — long-only already captures the bias it was meant to add.</p></div>
       <div class="tcard"><div class="th"><span>Entry-time cutoff</span><span class="vd yes">Kept</span></div>
         <p>The <b>single biggest improvement</b>: restricting entries to earlier in the session roughly doubled Sharpe and cut drawdown. Morning breakouts have all day to trend into the close.</p></div>
+      <div class="tcard"><div class="th"><span>Day-of-week filter</span><span class="vd mb">Promising · risky</span></div>
+        <p>Concentrating entries in the <b>early part of the week</b> roughly doubled Sharpe and cut drawdown — and, unusually, it <b>held up out-of-sample</b> on all three indices. But it's also a warning: the single <b>best in-sample weekday became one of the worst</b> out-of-sample. A textbook overfitting trap — so we treat it as a caution, not a dial.</p></div>
+      <div class="tcard"><div class="th"><span>Long vs short</span><span class="vd yes">Confirmed</span></div>
+        <p>Splitting a both-sides run by direction: <b>longs carried the entire edge</b>; shorts diluted it on every index and lost money on the least momentum-driven one. Exactly why the structure is long-only.</p></div>
     </div>
   </section>
 
