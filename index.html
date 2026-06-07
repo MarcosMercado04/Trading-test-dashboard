@@ -349,6 +349,44 @@
     </div>
   </section>
 
+  <!-- PROP TRADING -->
+  <section id="prop">
+    <div class="section-head">
+      <h2 class="sec display">Taking it to a prop account</h2>
+      <p class="sec-sub">Futures prop firms fund traders who pass an evaluation. The rule that busts most accounts isn't the profit target — it's the <b>maximum drawdown</b>. We Monte-Carlo'd the strategy against it: 20,000 simulated evaluations per setup, bootstrapped from its own trades, sweeping position size and the funded phase.</p>
+    </div>
+    <div class="card" style="overflow-x:auto; margin-bottom:1rem">
+      <table>
+        <thead><tr>
+          <th>Early-week · $50K eval · pass rate</th>
+          <th>Trailing drawdown<br><span class="muted" style="font-weight:400">Topstep · Tradeify Advanced</span></th>
+          <th>Static drawdown<br><span class="muted" style="font-weight:400">Tradeify Lightning</span></th>
+        </tr></thead>
+        <tbody>
+          <tr><td><span class="inst-tag"><span class="pdot" style="background:#19c3a6"></span>MES <span class="muted" style="font-weight:400">micros</span></span></td><td class="mono pos">82%</td><td class="mono pos">93%</td></tr>
+          <tr><td><span class="inst-tag"><span class="pdot" style="background:#8b7cff"></span>NQ <span class="muted" style="font-weight:400">mini</span></span></td><td class="mono">63%</td><td class="mono pos">67%</td></tr>
+          <tr><td><span class="inst-tag"><span class="pdot" style="background:#f5a524"></span>YM <span class="muted" style="font-weight:400">mini</span></span></td><td class="mono">50%</td><td class="mono pos">63%</td></tr>
+        </tbody>
+      </table>
+      <p class="muted" style="font-size:.78rem; margin:.6rem 0 0">Pass probability at best sizing. Larger accounts score higher — MES early-week reaches <b>92–100%</b> on $100K/$150K. The funded phase (surviving a year on the drawdown, no target) is simulated separately.</p>
+    </div>
+    <p class="note">The headline: <b>micros on a trailing-drawdown account, or any mini on a static-drawdown account.</b> Trailing-DD firms punish big single-trade swings, so the minis (NQ/YM) sit borderline there — but Tradeify Lightning's <b>static</b> drawdown (the floor never trails up) flips them to viable.</p>
+    <div class="section-head" style="margin-top:1.4rem"><h3 class="sec" style="font-size:1.15rem">How to use it successfully</h3></div>
+    <div class="pipe">
+      <div class="pstep"><h4>Trade micros on trailing accounts</h4>
+        <p>On Topstep / Tradeify Advanced, <b>MES micros</b> let you size so a single losing trade can't blow the trailing floor. That's what makes them the only consistently viable trailing-DD combo.</p></div>
+      <div class="pstep"><h4>Use static drawdown for minis</h4>
+        <p>Want NQ or YM size? A <b>static-drawdown</b> account (Tradeify Lightning) doesn't trail your floor upward, so a normal pullback after profit won't end the account — minis become viable.</p></div>
+      <div class="pstep"><h4>Keep the early-week filter on</h4>
+        <p>Early-week trading materially lifts pass odds versus full-week across every firm and instrument — fewer, higher-quality trades clear the target with less drawdown exposure.</p></div>
+      <div class="pstep"><h4>Size for the floor, not the target</h4>
+        <p>≈3 micros per $50K trailing account is the sweet spot. Scale up only as your realised buffer grows — chasing the target with size is what trips the drawdown.</p></div>
+      <div class="pstep"><h4>Respect the funded phase</h4>
+        <p>Passing is one hurdle; <b>keeping</b> the account is another. Bust risk compounds over a year, so trade the funded account more conservatively than the eval.</p></div>
+    </div>
+    <div class="disclaimer">⚠️ Simulations assume independent trades and use approximate, frequently-changing firm rules; Topstep's intraday trailing is harsher than this end-of-day model. Research &amp; education only — not financial or trading advice.</div>
+  </section>
+
   <!-- METHODOLOGY -->
   <section id="method">
     <div class="section-head"><h2 class="sec display">How it works &amp; what to distrust</h2></div>
